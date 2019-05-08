@@ -55,8 +55,7 @@ print(result)
 
 def func1():
     return 1
-print(func1())
-
+print('func1', func1())
 def func2():
     return 1,2,3
 r1 = func2()
