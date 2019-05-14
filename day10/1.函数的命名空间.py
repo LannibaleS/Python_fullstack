@@ -65,5 +65,7 @@ print(locals())   # locals在什么位置，就打印什么；本地的，locals
     {'__name__': '__main__', '__doc__': None, '__package__': None, '__loader__': <_frozen_importlib_external.SourceFileLoader object at 0x103155860>, '__spec__': None, '__annotations__': {}, '__builtins__': <module 'builtins' (built-in)>, '__file__': '/Users/lannibales/Downloads/学习视频/Python全栈9期/Python练习/day10/1.函数的命名空间.py', '__cached__': None, 'max': <function max at 0x103614620>, 'a': 1, 'func': <function func at 0x103621158>, 'b': 2, 'func1': <function func1 at 0x1036211e0>}
 '''
 
-
-
+x = 1
+y=5
+c = x if x>y else y
+print(c)
