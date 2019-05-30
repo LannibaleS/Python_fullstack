@@ -29,9 +29,20 @@ g=test()          # i: 0,1,2,3
 for n in [1,10]:  # n: 1,10
     g=(add(n,i) for i in g)
 
+'''for 循环套生成器的题，把它拆开'''
+
 n = 1
-g=(add(n,i) for i in g)
+g=(add(n,i) for i in g)   # g=(add(n,i) for i in test())
 n = 10
-g=(add(n,i) for i in g)
+g=(add(n,i) for i in g)   # g=(add(n,i) for i in (add(n,i) for i in test()))
+
+'''g=(add(10,i) for i in (add(10,i) for i in (0,1,2,3))
+   g=(add(10,i) for i in (10,11,12,13))
+   (20,21,22,23)
+
+
+'''
+
+print(list(g))
 
 # [1,3,5,7,5,6,7,8,9]
