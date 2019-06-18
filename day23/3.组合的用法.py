@@ -42,6 +42,12 @@ class Weapon:
         self.price = price
         self.njd = njd
 
+    def hand18(self, person):
+        if self.njd > 0:
+            person.hp -= self.aggr*2
+            self.njd -= 1
+
+
     # def hand18(self, person):
 
 
@@ -53,6 +59,7 @@ w = Weapon('打狗棒', 100, 100, 999)
 print(ls.__dict__)
 ls.money = 1000
 ls.get_weapon(w)
+print(ls.weapon)
 
 print(ls.__dict__)
 
@@ -62,6 +69,8 @@ dog.bite(ls)
 print(dog.__dict__)
 print(ls.__dict__)
 
+ls.weapon.hand18(dog)
+print(dog.__dict__)
 
 '''
 组合：在一个对象的属性值，是另外一个类的对象
