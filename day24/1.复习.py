@@ -27,4 +27,17 @@ class 类名
 '''
 组合：一个类的对象是另外一个类对象的属性
 '''
+class A:
+    def __init__(self):
+        self.name = 'ls'
 
+class B:
+    def __init__(self, year, month ,day):
+        self.year = year
+        self.month = month
+        self.day = day
+
+b = B(1992,4,13)
+a = A()
+a.birth = b
+print(a.birth.year)

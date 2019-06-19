@@ -1,0 +1,1 @@
+userinfo = r'/Users/lannibales/Downloads/学习视频/Python全栈9期/Python练习/homework/db/userinfo'
