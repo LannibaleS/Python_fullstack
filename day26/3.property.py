@@ -96,3 +96,4 @@ ls.name = 'htz'
 
 print(ls.name)
 ''' AttributeError: 'Person' object has no attribute '_Person__name' '''
+''''''
