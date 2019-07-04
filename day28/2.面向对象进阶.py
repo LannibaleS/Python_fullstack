@@ -36,4 +36,56 @@ print('\n======= new =========')
 当你之后再来实例化的时候，就用之前创建的对象
 '''
 
+class A:
+    __instance = False
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
 
+    def __new__(cls, *args, **kwargs):
+        if cls.__instance:
+            return cls.__instance
+        # if not hasattr(cls, '__instance'):
+        cls.__instance = object.__new__(cls)
+        return cls.__instance
+
+ls = A('ls', 27)
+htz = A('htz', 26)
+ls.cloth = 'Armani'
+print(ls, htz)
+print(ls.name, htz.name)
+print(ls.cloth, htz.cloth)
+
+print('\n======= eq =========')
+'''
+eq：判断两个对象是否相等，默认比较两个对象的内存地址，可以重新定制
+'''
+class B:
+    def __init__(self, name):
+        self.name = name
+
+    def __eq__(self, other):
+        if self.name == other.name:
+            return True
+        else: return False
+
+b1 = B('egg')
+b2 = B('egg')
+print(b1 == b2)
+
+
+print('\n======= hash =========')
+class C:
+    def __init__(self, name, sex):
+        self.name = name
+        self.sex= sex
+
+    def __hash__(self):
+        return hash(self.name + self.sex)
+
+c1 = C('ls', 'male')
+c3 = C('ls', 'male')
+# c2 = C('htz')
+print(hash(c1))
+print(hash(c3))
+# print(hash(c2))

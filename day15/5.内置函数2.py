@@ -63,9 +63,9 @@ print(f)
 进制转换
 
 '''
-print(bin(10))  # 二进制
-print(oct(10))  # 八进制
-print(hex(10))  # 十六进制
+print(bin(10))  # 二进制 0b
+print(oct(10))  # 八进制 0o
+print(hex(10))  # 十六进制 0x
 
 '''
 数学运算
@@ -84,11 +84,11 @@ print(round(3.145986, 3))
 print(pow(2,3))  # 2^3 = 8
 print(pow(2,3,3))  # 2^3%3 = 2
 
-# sum(iterable, start)
+# sum(iterable, start) 只能接收可迭代的数据
 ret = sum([1,2,3,4], 10)
 print(ret)
 
-# min
+# min 
 print(min([1,2,3,4]))
 print(min(1,3,4,5))
 print(min(1,2,3,-4))
