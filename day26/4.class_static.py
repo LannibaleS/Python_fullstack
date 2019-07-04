@@ -33,21 +33,10 @@ print(apple.price)
 java
 '''
 
-class Login:
-    def __init__(self, name, password):
-        self.name = name
-        self.password = password
+# class Login:
+#     def __init__(self, name, password):
+#
 
-    def login(self):
-        pass
-
-    @staticmethod
-    def get_user_pwd():
-        user = input('input username')
-        pwd = input('input pwd')
-        # Login(user, pwd)
-      
-Login.get_user_pwd()
 
 
 
@@ -55,13 +44,4 @@ Login.get_user_pwd()
 在完全面向对象的过程中，
 如果一个函数，既和对象没关系，也和类没关系，
 那么就用staticmethod将这个函数变成一个静态方法
-
-
-类方法和静态方法，都是类调用的
-对象可以调用类方法和静态方法吗？
-对象也可以
-一般情况下，推荐用类名调用
-
-类方法有一个默认参数，cls，代表这个类
-静态方法，没有默认参数，就像函数一样
 '''
